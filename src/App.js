@@ -1,8 +1,11 @@
+import CreatePage from "./components/content/pages/CreatePage.js"
 import './App.css';
 
 function App() {
   return (
-    <>Hello world!</>
+    <div className="App">
+      <CreatePage />
+    </div>
   );
 }
 
