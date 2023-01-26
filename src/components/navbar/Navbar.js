@@ -6,6 +6,7 @@ export default function Navbar() {
         <nav id="mainNavigation">
             <Link to="/">Home</Link>
             <Link to="/create-page">Create Page</Link>
+            <Link to="/list-pages">List Pages</Link>
         </nav >
     )
 }
