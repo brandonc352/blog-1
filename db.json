@@ -1,3 +1,14 @@
 {
-  "pages": []
+  "pages": [
+    {
+      "title": "About",
+      "body": "Information about us.",
+      "id": 1
+    },
+    {
+      "title": "Contact",
+      "body": "Ways to contact us.",
+      "id": 2
+    }
+  ]
 }
