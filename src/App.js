@@ -1,11 +1,19 @@
-import CreatePage from "./components/content/pages/CreatePage.js"
-import './App.css';
+import Navbar from './components/navbar/Navbar.js'
+import HomePage from './components/pages/HomePage'
+import CreatePage from './components/pages/CreatePage'
+import { Route, Routes } from "react-router-dom"
 
 function App() {
   return (
-    <div className="App">
-      <CreatePage />
-    </div>
+    <>
+      <Navbar />
+      <div>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/create-page" element={<CreatePage />} />
+        </Routes>
+      </div>
+    </ >
   );
 }
 
