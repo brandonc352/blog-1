@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useEffect, useState } from "react"
 
 export default function ListPages() {
@@ -6,8 +6,10 @@ export default function ListPages() {
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
 
+    let { id } = useParams()
+
     useEffect(() => {
-        fetch("http://localhost:7500/pages")
+        fetch(`http://localhost:7500/pages/${id}`)
             .then((response) => {
                 if (response.ok) {
                     return response.json()
@@ -30,16 +32,12 @@ export default function ListPages() {
     if (loading) return ""
     if (error) return "Error!"
 
-    const pagesList = data.map(({ id, title, body }) => (
-        <div key={id}>
-            <b><Link to={{ pathname: `/page/${id}` }}>{title}</Link></b>
-            <p>{body}</p>
-        </div >
-    ))
     return (
         <>
-            <h1>List Pages</h1>
-            <div>{pagesList}</div>
+            <h1>Display Page</h1>
+            <h1>{data.title}</h1>
+            <div>{data.body}</div>
+
         </>
     )
 }
