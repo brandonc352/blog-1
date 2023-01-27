@@ -1,10 +1,10 @@
-import Navbar from './components/navbar/Navbar.js'
-import HomePage from './components/pages/HomePage'
-import CreatePage from './components/pages/CreatePage'
-import ListPages from './components/pages/ListPages'
-import DisplayPage from './components/pages/DisplayPage'
-import EditPage from './components/pages/EditPage'
-import { Route, Routes } from "react-router-dom"
+import Navbar from "./components/navbar/Navbar.js";
+import HomePage from "./components/pages/HomePage";
+import CreatePage from "./components/pages/CreatePage";
+import ListPages from "./components/pages/ListPages";
+import DisplayPage from "./components/pages/DisplayPage";
+import EditPage from "./components/pages/EditPage";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
           <Route path="/page/edit/:id" element={<EditPage />} />
         </Routes>
       </div>
-    </ >
+    </>
   );
 }
 
