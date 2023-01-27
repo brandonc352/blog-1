@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from "react"
-
+import DeletePageButton from '../DeletePageButton.js'
 export default function ListPages() {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -35,9 +35,10 @@ export default function ListPages() {
     return (
         <>
             <h1>Display Page</h1>
-            <h1>{data.title}</h1> 
+            <h1>{data.title}</h1>
             <div>{data.body}</div>
-            <Link to={{ pathname: `/page/edit/${id}` }}>Edit Page</Link>
+            <Link to={{ pathname: `/page/edit/${id}` }}>Edit Page</Link><br/>
+            <DeletePageButton />
         </>
     )
 }
