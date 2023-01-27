@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useEffect, useState } from "react"
 
 export default function ListPages() {
@@ -35,9 +35,9 @@ export default function ListPages() {
     return (
         <>
             <h1>Display Page</h1>
-            <h1>{data.title}</h1>
+            <h1>{data.title}</h1> 
             <div>{data.body}</div>
-
+            <Link to={{ pathname: `/page/edit/${id}` }}>Edit Page</Link>
         </>
     )
 }
